@@ -1,0 +1,10 @@
+[Unit]
+Description=Start MOHH GPS Instances
+
+[Service]
+PassEnvironment=GPS_NAME GPS_PWD GPS_ADM_PWD GPS_PORT GPS_INSTANCES
+ExecStart=/var/www/mohh-gps/start_gps_instances.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

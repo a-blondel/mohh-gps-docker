@@ -1,0 +1,10 @@
+[Unit]
+Description=Run MOHH GPS Instances periodically
+
+[Timer]
+OnBootSec=0
+OnUnitActiveSec=5min
+Unit=mohh-gps.service
+
+[Install]
+WantedBy=timers.target
