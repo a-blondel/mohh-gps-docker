@@ -3,7 +3,13 @@ Description=Start MOHH GPS Instances
 
 [Service]
 PassEnvironment=GPS_NAME GPS_PWD GPS_ADM_PWD GPS_PORT GPS_INSTANCES
+Environment=WINEDEBUG=-all
+Environment=WINEARCH=win32
+Environment=DISPLAY=:1
+WorkingDirectory=/var/www/mohh-gps
 ExecStart=/var/www/mohh-gps/start_gps_instances.sh
+StandardOutput=append:/var/log/mohh-gps/mohz.log
+StandardError=append:/var/log/mohh-gps/mohz.log
 Restart=on-failure
 
 [Install]
