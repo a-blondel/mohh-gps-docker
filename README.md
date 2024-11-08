@@ -15,6 +15,3 @@ When running the container, you need to specify the following environment variab
 
 ## Build the image manually
 In order to do so, you need to create a `bin` folder at the root of this project and put the installation files from the UHS installer in it (which includes `mohz.exe`, ...).
-
-## Limitations
-Not every machine can run this docker image yet. This is most likely due to hardware limitations.
